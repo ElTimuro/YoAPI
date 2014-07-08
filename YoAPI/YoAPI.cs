@@ -82,7 +82,7 @@ namespace YoAPI
             {
                 if (APIToken == string.Empty || APIToken == null)
                 {
-                    exceptionObject = new InvalidOperationException("No api token was set. Set the api token using the API_TOKEN property.");
+                    exceptionObject = new InvalidOperationException("No api token was set. Set the api token using the APIToken property.");
                     return;
                 }
 
@@ -94,7 +94,7 @@ namespace YoAPI
                     lastCallSuccessful = response.IsSuccessStatusCode;
                     if (!response.IsSuccessStatusCode)
                     {
-                        throw new HttpRequestException("Status code: " + response.StatusCode + " - " + response.ReasonPhrase);
+                        exceptionObject = new Exception("Status code: " + response.StatusCode + " - " + response.ReasonPhrase);
                     }
                 }
                 catch (Exception ex)

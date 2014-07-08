@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoAPI", "YoAPI.csproj", "{EF26A89E-8B89-4F3A-B56F-6A10DFC56DC6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoAPI", "YoAPI\YoAPI.csproj", "{EF26A89E-8B89-4F3A-B56F-6A10DFC56DC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoAPI.Example", "YoAPI.Example\YoAPI.Example.csproj", "{7EDDED44-9107-40A2-B001-5F6817B1BBC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +15,10 @@ Global
 		{EF26A89E-8B89-4F3A-B56F-6A10DFC56DC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF26A89E-8B89-4F3A-B56F-6A10DFC56DC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF26A89E-8B89-4F3A-B56F-6A10DFC56DC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EDDED44-9107-40A2-B001-5F6817B1BBC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EDDED44-9107-40A2-B001-5F6817B1BBC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EDDED44-9107-40A2-B001-5F6817B1BBC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EDDED44-9107-40A2-B001-5F6817B1BBC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

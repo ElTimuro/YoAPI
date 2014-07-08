@@ -1,0 +1,9 @@
+﻿<Window x:Class="YoAPI.Example.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Yo Client" Height="350" Width="525" ResizeMode="NoResize" Icon="Resources/favicon.ico">
+    
+    <Grid>
+        <Button x:Name="YoButton" Content="Yo" Margin="50" Click="YoButton_Click" Style="{StaticResource YoButtonStyle}"/>
+    </Grid>
+</Window>
