@@ -1,5 +1,0 @@
-C:\Users\Timur\Documents\Visual Studio 2012\Projects\YoClient\YoAPI\bin\Release\YoAPI.dll
-C:\Users\Timur\Documents\Visual Studio 2012\Projects\YoClient\YoAPI\bin\Release\YoAPI.pdb
-C:\Users\Timur\Documents\Visual Studio 2012\Projects\YoClient\YoAPI\obj\Release\YoAPI.dll
-C:\Users\Timur\Documents\Visual Studio 2012\Projects\YoClient\YoAPI\obj\Release\YoAPI.pdb
-C:\Users\Timur\Documents\Visual Studio 2012\Projects\YoClient\YoAPI\obj\Release\YoAPI.csprojResolveAssemblyReference.cache

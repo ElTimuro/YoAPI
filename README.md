@@ -11,4 +11,4 @@ await YoAPIClass.YoAll();
 
 Planned:
 -----
-Yoing individual yosers.
+- Yoing individual yosers.
