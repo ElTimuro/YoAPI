@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace YoAPI
@@ -15,29 +13,30 @@ namespace YoAPI
         /// <summary>
         /// Constant url of the Yo api.
         /// </summary>
-        private const string YO_API_URL = "http://api.justyo.co/yoall/";
+        private const string YoApiUrl = "http://api.justyo.co/yoall/";
 
+        /// <summary>
+        /// The the last occured exception.
+        /// </summary>
         private static Exception exceptionObject;
 
+        /// <summary>
+        /// The response to the last call.
+        /// </summary>
         private static HttpResponseMessage response;
 
+        /// <summary>
+        /// True if the last call was successful.
+        /// </summary>
         private static bool lastCallSuccessful;
 
         /// <summary>
-        /// This api token associated with your Yo api account.
+        /// Gets or sets the api token associated with your Yo api account.
         /// </summary>
         public static string APIToken { get; set; }
 
-        private static HttpResponseMessage Response
-        {
-            get
-            {
-                return response;
-            }
-        }
-
         /// <summary>
-        /// True if no errors occured in the last call and the response had a success status code.
+        /// Gets a value indicating whether no errors occured in the last call and the response had a success status code.
         /// </summary>
         public static bool LastCallSuccessful
         {
@@ -48,7 +47,18 @@ namespace YoAPI
         }
 
         /// <summary>
-        /// Holds the exception object of any error, that occured during API operations or null if no errors occured.
+        /// Gets the response to the last call.
+        /// </summary>
+        public static HttpResponseMessage Response
+        {
+            get
+            {
+                return response;
+            }
+        }
+
+        /// <summary>
+        /// Gets the exception object of any error, that occured during API operations or null if no errors occured.
         /// </summary>
         public static Exception ExceptionObject
         {
@@ -60,8 +70,10 @@ namespace YoAPI
 
         /// <summary>
         /// Sends a Yo to all subscribers of Yo-Account associated with the given api token set in <see cref="APIToken" />
+        /// Useage: await YoApi.YoAll();
         /// </summary>
-        public static async Task YoALL()
+        /// <returns>A task that enables you to (optionally) use the await keyword to wait until the call is finished.</returns>
+        public static async Task YoAll()
         {
             exceptionObject = null;
             response = null;
@@ -78,7 +90,7 @@ namespace YoAPI
                 {
                     client.DefaultRequestHeaders.Accept.Clear();
                     var requestContent = new FormUrlEncodedContent(new[] { new KeyValuePair<string, string>("api_token", APIToken) });
-                    response = await client.PostAsync(YO_API_URL, requestContent);
+                    response = await client.PostAsync(YoApiUrl, requestContent);
                     lastCallSuccessful = response.IsSuccessStatusCode;
                     if (!response.IsSuccessStatusCode)
                     {
